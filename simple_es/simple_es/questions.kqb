@@ -1,0 +1,37 @@
+
+# questions.kqb
+
+is_fiebre($ans)
+	Tienes fiebre, temperatura >38 grados?
+	---
+	$ans = yn
+
+is_tos($ans)
+	Tienes tos seca?
+	---
+	$ans = yn
+
+is_cansado($ans)
+    Tienes cansancio?
+    ---
+    $ans = yn
+
+is_dolorcabeza($ans)
+    Tienes dolor de cabeza?
+    ---
+    $ans = yn
+
+is_dolorgarganta($ans)
+    Tienes dolor de gartanta?
+    ---
+    $ans = yn
+
+is_dificultadrespiratoria($ans)
+    Tienes dificultad para respirar?
+    ---
+    $ans = yn
+
+is_perdidasentidos($ans)
+    Tienes perdida del sentido del gusto y/u olfato?
+    ---
+    $ans = yn

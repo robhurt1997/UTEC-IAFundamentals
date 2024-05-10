@@ -1,0 +1,74 @@
+
+# bc_simple_rules_questions.krb
+
+no_covid_sinfiebre
+    use que_diagnostico_tiene(solo_somatiza)
+    when
+        questions.is_fiebre(False)
+
+what_to_bring_raincoat
+    use que_diagnostico_tiene(nocovid_resfriadocomun)
+    when
+        questions.is_fiebre(True)
+        questions.is_cansado(False)
+
+no_covid_sincansancio
+    use que_diagnostico_tiene(nocovid_resfriadocomun)
+    when
+        questions.is_fiebre(True)
+        questions.is_cansado(True)
+        questions.is_tos(False)
+
+no_covid_sindolorcabeza
+    use que_diagnostico_tiene(nocovid_resfriadocomun)
+    when
+        questions.is_fiebre(True)
+        questions.is_tos(True)
+        questions.is_cansado(True)
+        questions.is_dolorcabeza(False)
+
+no_covid_dolorgarganta
+    use que_diagnostico_tiene(nocovid_resfriadocomun)
+    when
+        questions.is_fiebre(True)
+        questions.is_tos(True)
+        questions.is_cansado(True)
+        questions.is_dolorcabeza(True)
+        questions.is_dolorgarganta(False)
+
+no_covid_dificresp
+    use que_diagnostico_tiene(nocovid_resfriadocomun)
+    when
+        questions.is_fiebre(True)
+        questions.is_tos(True)
+        questions.is_cansado(True)
+        questions.is_dolorcabeza(True)
+        questions.is_dolorgarganta(True)
+        questions.is_dificultadrespiratoria(False)
+
+no_covid_difresp
+    use que_diagnostico_tiene(nocovid_resfriadocomun)
+    when
+        questions.is_fiebre(True)
+        questions.is_tos(True)
+        questions.is_cansado(True)
+        questions.is_dolorcabeza(True)
+        questions.is_dolorgarganta(True)
+        questions.is_dificultadrespiratoria(True)
+        questions.is_perdidasentidos(False)
+
+si_covid
+    use que_diagnostico_tiene(covid)
+    when
+        questions.is_fiebre(True)
+        questions.is_tos(True)
+        questions.is_cansado(True)
+        questions.is_dolorcabeza(True)
+        questions.is_dolorgarganta(True)
+        questions.is_dificultadrespiratoria(True)
+        questions.is_perdidasentidos(True)
+
+#dolor de garganta
+#sin sentidos olfato gusto
+#dificultad_respiratoria
+#fatiga
